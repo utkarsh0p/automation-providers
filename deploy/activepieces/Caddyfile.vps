@@ -1,0 +1,9 @@
+# Caddy gets real TLS certs automatically and routes each subdomain to its service.
+# API_DOMAIN and AP_DOMAIN are injected from the environment (see docker-compose.vps.yml).
+{$API_DOMAIN} {
+	reverse_proxy backend:8000
+}
+
+{$AP_DOMAIN} {
+	reverse_proxy activepieces:80
+}
