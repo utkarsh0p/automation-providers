@@ -1,5 +1,0 @@
-# Caddy terminates TLS for your domain and proxies to the Activepieces container.
-# AP_DOMAIN is injected from the environment (see docker-compose.prod.yml / .env).
-{$AP_DOMAIN} {
-	reverse_proxy activepieces:80
-}
